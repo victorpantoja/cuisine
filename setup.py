@@ -6,8 +6,11 @@ try:
 except ImportError:
     from distutils.core import setup
 
+import locale
+encoding = locale.getdefaultlocale()[1]
+
 VERSION = eval(filter(lambda _:_.startswith("VERSION"),
-    file("src/cuisine.py").readlines())[0].split("=")[1])
+    file("src/cuisine.py").readlines())[0].decode(encoding).split("=")[1])
 
 setup(
     name             = "cuisine",
