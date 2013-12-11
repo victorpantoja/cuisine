@@ -10,7 +10,7 @@ import locale
 encoding = locale.getdefaultlocale()[1]
 
 VERSION = eval(filter(lambda _:_.startswith("VERSION"),
-    file("src/cuisine.py").readlines())[0].decode(encoding).split("=")[1])
+    open("src/cuisine.py").readlines())[0].decode(encoding).split("=")[1])
 
 setup(
     name             = "cuisine",
