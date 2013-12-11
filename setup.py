@@ -9,8 +9,7 @@ except ImportError:
 import locale
 encoding = locale.getdefaultlocale()[1]
 
-VERSION = eval(filter(lambda _:_.startswith("VERSION"),
-    open("src/cuisine.py").readlines())[0].decode(encoding).split("=")[1])
+VERSION = "0.7.0-pantoja"
 
 setup(
     name             = "cuisine",
